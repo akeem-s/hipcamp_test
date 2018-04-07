@@ -1,0 +1,61 @@
+$borderGrey: #ebebeb;
+$sleekBorder: 1px solid $borderGrey;
+
+/* App component styles begin */
+  .mainContentContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+/* App component styles end*/
+
+/* header styles start */
+.header {
+  display: flex;
+  flex-direction: row;
+  border-bottom: $sleekBorder;
+  height: 70px;
+}
+
+.headerLogoContainer {
+  border-right: $sleekBorder;
+  width: 193px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-content: center;
+}
+/* header styles end */
+
+/* feature styles begin */
+.customFa {
+  margin-left: 10px;
+}
+
+.customFaCheck {
+  font-size: 15px;
+  color: green;
+}
+
+.customFaBan {
+  font-size: 15px;
+  color: red;
+}
+
+.feature {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+/* features styles end*/
+
+/* campsite styles begin */
+.campsiteContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+/* campsite styles end */
