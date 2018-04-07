@@ -23,6 +23,7 @@ export default class CampsiteContainer extends Component {
   render(){
     return (
       <div className='campsiteContainer'>
+        <h2 className='campsiteName'>Campsite Name Placeholder</h2>
         {this.state.features.map((f)=>{return <Feature key={f.title} title={f.title} presence={f.presence} subfeatures={f.subfeatures}/>})}
       </div>
     )

@@ -13,10 +13,17 @@ export default class Feature extends Component {
     super(props);
     this.renderPresenceIcons = this.renderPresenceIcons.bind(this);
     this.handleClick = this.handleClick.bind(this);
-    state:{
-      showSubfeatures: false;
+    this.renderSubfeatures = this.renderSubfeatures.bind(this);
+    this.state = {
+      showSubfeatures: false,
     }
   }
+
+  handleClick(){
+    this.setState({
+      showSubfeatures: !this.state.showSubfeatures
+    })
+  };
 
   renderPresenceIcons(presence){
     if(presence){
@@ -25,31 +32,34 @@ export default class Feature extends Component {
     return <FontAwesome className='customFaBan customFa' name='ban'/>;
   };
 
-  handleClick(subfeatures){
-
-  };
-
   renderSubfeatures(){
+    const { showSubfeatures } = this.state;
     const { subfeatures } = this.props;
-    if(subfeatures.length > 0){
-      subfeatures.map((f)=>{
+    let html;
+    if(subfeatures.length > 0 && showSubfeatures){
+      html = subfeatures.map((f)=>{
+        const { title, presence } = f;
         return (
-          <div className='subfeaturesContainer' key={f.title}>
-            <p className='subfeatureTitle'>{f.title}</p>
-            <p className='subfeaturePresence'>{f.presence}</p>
+          <div className='subfeaturesContainer' key={title}>
+            <p className='subfeatureTitle'>{title}</p>
+            {this.renderPresenceIcons(presence)}
           </div>
         )
       })
     }
+    return html;
   };
 
   render(){
     const { presence, subfeatures, title } = this.props;
+    const hasSubfeaturesClassName = subfeatures.length > 0 ? 'hasSubfeatures' : null;
     return (
-      <div className='feature' >
-        <p className='featureTitle' onClick={()=>{this.handleClick(subfeatures)}}>{title}</p>
-        {this.}
-        {this.renderPresenceIcons(presence)}
+      <div className={'feature '+hasSubfeaturesClassName}>
+        <div className='featureDetailsContainer'>
+          <p className='featureTitle' onClick={()=>{this.handleClick(subfeatures)}}>{title}</p>
+          {this.renderPresenceIcons(presence)}
+        </div>
+        {this.renderSubfeatures()}
       </div>
     )
   }
