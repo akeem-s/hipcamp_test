@@ -1,4 +1,4 @@
-var FEATURES = [
+export const FEATURES = [
   {
     'title': 'Toilet',
     'presence': true,

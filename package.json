@@ -57,6 +57,7 @@
     "setupFiles": [
       "<rootDir>/config/polyfills.js"
     ],
+    "setupTestFrameworkScriptFile": "<rootDir>/config/jest/setupTests.js",
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
       "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,mjs}"
@@ -93,6 +94,9 @@
     "extends": "react-app"
   },
   "devDependencies": {
+    "ajv": "^6.4.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "node-sass": "^4.8.3",
     "sass-loader": "^6.0.7"
   }

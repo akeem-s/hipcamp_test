@@ -54,9 +54,9 @@ export default class Feature extends Component {
     const { presence, subfeatures, title } = this.props;
     const hasSubfeaturesClassName = subfeatures.length > 0 ? 'hasSubfeatures' : null;
     return (
-      <div className={'feature '+hasSubfeaturesClassName}>
+      <div className={'feature '+hasSubfeaturesClassName} onClick={()=>{this.handleClick(subfeatures)}}>
         <div className='featureDetailsContainer'>
-          <p className='featureTitle' onClick={()=>{this.handleClick(subfeatures)}}>{title}</p>
+          <p className='featureTitle' >{title}</p>
           {this.renderPresenceIcons(presence)}
         </div>
         {this.renderSubfeatures()}

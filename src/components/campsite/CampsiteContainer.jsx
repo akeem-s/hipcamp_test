@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 // components
 import Feature from './Feature';
+import { FEATURES } from '../../assets/camp_features';
 
 export default class CampsiteContainer extends Component {
   constructor(props){
@@ -16,7 +17,7 @@ export default class CampsiteContainer extends Component {
     // here can have performance implications, which I would consider if dealing with real
     // data.
     this.setState({
-      features: window.FEATURES,
+      features: FEATURES,
     })
   }
 
@@ -24,7 +25,7 @@ export default class CampsiteContainer extends Component {
     return (
       <div className='campsiteContainer'>
         <h2 className='campsiteName'>Campsite Name Placeholder</h2>
-        {this.state.features.map((f)=>{return <Feature key={f.title} title={f.title} presence={f.presence} subfeatures={f.subfeatures}/>})}
+        {this.state.features.map((f)=>{ return <Feature key={f.title} title={f.title} presence={f.presence} subfeatures={f.subfeatures}/>; })}
       </div>
     )
   }
