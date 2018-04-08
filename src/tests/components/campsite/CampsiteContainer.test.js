@@ -1,12 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
 import CampsiteContainer from '../../../components/campsite/CampsiteContainer';
 import Feature from '../../../components/campsite/Feature';
 import { FEATURES } from '../../../assets/camp_features.js';
 
-describe('CampsiteContainer', () => {
+describe(CampsiteContainer.name, () => {
   let wrapper;
   const getWrapper = () => {
     const component = shallow(<CampsiteContainer/>);

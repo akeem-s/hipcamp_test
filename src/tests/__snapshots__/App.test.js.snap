@@ -63,7 +63,7 @@ exports[`App snapshot should contain expected DOM elements 1`] = `
         </div>
       </div>
       <div
-        className="feature hasSubfeatures"
+        className="feature subfeaturesPresent"
         onClick={[Function]}
       >
         <div
@@ -81,7 +81,7 @@ exports[`App snapshot should contain expected DOM elements 1`] = `
         </div>
       </div>
       <div
-        className="feature hasSubfeatures"
+        className="feature subfeaturesPresent"
         onClick={[Function]}
       >
         <div

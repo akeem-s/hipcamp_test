@@ -1,11 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
 import Feature from '../../../components/campsite/Feature';
 import { FEATURES } from '../../../assets/camp_features.js';
 
-describe('Feature', () => {
+describe(Feature.name, () => {
   let wrapper;
   const { title, presence, subfeatures } = FEATURES[0];
   const getWrapper = () => {
@@ -22,8 +21,8 @@ describe('Feature', () => {
   });
 
   test('receives props', () => {
-    expect(wrapper.instance().props.title).toEqual(title)
-  })
+    expect(wrapper.instance().props.title).toEqual(title);
+  });
 
   test('snapshot should contain expected DOM elements', () => {
     const renderedValue = renderer.create(wrapper).toJSON();

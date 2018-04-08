@@ -16,21 +16,21 @@ export default class Feature extends Component {
     this.renderSubfeatures = this.renderSubfeatures.bind(this);
     this.state = {
       showSubfeatures: false,
-    }
+    };
   }
 
   handleClick(){
     this.setState({
-      showSubfeatures: !this.state.showSubfeatures
-    })
-  };
+      showSubfeatures: !this.state.showSubfeatures,
+    });
+  }
 
   renderPresenceIcons(presence){
     if(presence){
       return <FontAwesome className='customFaCheck customFa' name='check'/>;
     }
     return <FontAwesome className='customFaBan customFa' name='ban'/>;
-  };
+  }
 
   renderSubfeatures(){
     const { showSubfeatures } = this.state;
@@ -44,25 +44,25 @@ export default class Feature extends Component {
             <p className='subfeatureTitle'>{title}</p>
             {this.renderPresenceIcons(presence)}
           </div>
-        )
-      })
+        );
+      });
     }
     return html;
-  };
+  }
 
   render(){
     const { presence, subfeatures, title } = this.props;
-    const hasSubfeaturesClassName = subfeatures.length > 0 ? 'hasSubfeatures' : null;
+    const hasSubfeaturesClassName = subfeatures.length > 0 ? 'subfeaturesPresent' : null;
     return (
-      <div className={'feature '+hasSubfeaturesClassName} onClick={()=>{this.handleClick(subfeatures)}}>
+      <div className={`feature ${hasSubfeaturesClassName}` } onClick={()=>{ this.handleClick(subfeatures); }}>
         <div className='featureDetailsContainer'>
           <p className='featureTitle' >{title}</p>
           {this.renderPresenceIcons(presence)}
         </div>
         {this.renderSubfeatures()}
       </div>
-    )
+    );
   }
-};
+}
 
 Feature.propTypes = propTypes;
