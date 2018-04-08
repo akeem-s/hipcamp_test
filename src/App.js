@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
-import './styles.scss'
+import './styles.scss';
 // Components
 import CampsiteContainer from './components/campsite/CampsiteContainer';
 import Header from './shared/Header';

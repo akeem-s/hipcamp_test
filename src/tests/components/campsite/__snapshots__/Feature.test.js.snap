@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Feature snapshot should contain expected DOM elements 1`] = `
+<div
+  className="feature null"
+  onClick={[Function]}
+>
+  <div
+    className="featureDetailsContainer"
+  >
+    <p
+      className="featureTitle"
+    >
+      Toilet
+    </p>
+    <span
+      aria-hidden={true}
+      className="fa fa-check customFaCheck customFa"
+    />
+  </div>
+</div>
+`;

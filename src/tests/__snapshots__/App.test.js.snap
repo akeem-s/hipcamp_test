@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App snapshot should contain expected DOM elements 1`] = `
+<div>
+  <div
+    className="header"
+  >
+    <div
+      className="headerLogoContainer"
+    >
+      <img
+        alt="hipcampLogo"
+        className="headerLogo"
+        src="hipcampNewLogo.png"
+      />
+    </div>
+  </div>
+  <div
+    className="mainContentContainer"
+  >
+    <div
+      className="campsiteContainer"
+    >
+      <h2
+        className="campsiteName"
+      >
+        Campsite Name Placeholder
+      </h2>
+      <div
+        className="feature null"
+        onClick={[Function]}
+      >
+        <div
+          className="featureDetailsContainer"
+        >
+          <p
+            className="featureTitle"
+          >
+            Toilet
+          </p>
+          <span
+            aria-hidden={true}
+            className="fa fa-check customFaCheck customFa"
+          />
+        </div>
+      </div>
+      <div
+        className="feature null"
+        onClick={[Function]}
+      >
+        <div
+          className="featureDetailsContainer"
+        >
+          <p
+            className="featureTitle"
+          >
+            Pets allowed
+          </p>
+          <span
+            aria-hidden={true}
+            className="fa fa-check customFaCheck customFa"
+          />
+        </div>
+      </div>
+      <div
+        className="feature subfeaturesPresent"
+        onClick={[Function]}
+      >
+        <div
+          className="featureDetailsContainer"
+        >
+          <p
+            className="featureTitle"
+          >
+            Shower
+          </p>
+          <span
+            aria-hidden={true}
+            className="fa fa-ban customFaBan customFa"
+          />
+        </div>
+      </div>
+      <div
+        className="feature subfeaturesPresent"
+        onClick={[Function]}
+      >
+        <div
+          className="featureDetailsContainer"
+        >
+          <p
+            className="featureTitle"
+          >
+            Trash
+          </p>
+          <span
+            aria-hidden={true}
+            className="fa fa-check customFaCheck customFa"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
