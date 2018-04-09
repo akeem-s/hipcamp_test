@@ -2,12 +2,12 @@ export const FEATURES = [
   {
     'title': 'Toilet',
     'presence': true,
-    'subfeatures': []
+    'subfeatures': [],
   },
   {
     'title': 'Pets allowed',
     'presence': true,
-    'subfeatures': []
+    'subfeatures': [],
   },
   {
     'title': 'Shower',
@@ -16,9 +16,9 @@ export const FEATURES = [
       {
         'title': 'Outdoor shower',
         'presence': false,
-        'subfeatures': []
-      }
-    ]
+        'subfeatures': [],
+      },
+    ],
   },
   {
     'title': 'Trash',
@@ -27,12 +27,12 @@ export const FEATURES = [
       {
         'title': 'Recycling bin',
         'presence': true,
-        'subfeatures': []
+        'subfeatures': [],
       },
       {
         'title': 'Compost bin',
         'presence': true,
-        'subfeatures': []
+        'subfeatures': [],
       },
       {
         'title': 'Trash bin',
@@ -41,10 +41,10 @@ export const FEATURES = [
           {
             'title': 'Pack in, pack out',
             'presence': true,
-            'subfeatures': []
-          }
-        ]
-      }
-    ]
-  }
+            'subfeatures': [],
+          },
+        ],
+      },
+    ],
+  },
 ];
